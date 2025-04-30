@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #7F7FD5, #91EAE4);
+    color: #333;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Header */
+.card-header {
+    background-color: #4e73df;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.card-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.card-header p {
+    margin: 5px 0 0;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Card Body */
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.card-body .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-body .input-group-text {
+    background-color: #f0f4ff;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.card-body input,
+.card-body select {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.card-body input:focus,
+.card-body select:focus {
+    outline: none;
+    border-color: #4e73df;
+    box-shadow: 0 0 4px rgba(78, 115, 223, 0.4);
+}
+
+/* Buttons */
+.card-body button {
+    width: 100%;
+    background-color: #4e73df;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-body button:hover {
+    background-color: #304da3;
+    transform: translateY(-1px);
+}
+
+.card-body button:active {
+    transform: translateY(1px);
+}
+
+/* Invite Section */
+.card-body .btn-outline-primary {
+    border: 1px solid #4e73df;
+    color: #4e73df;
+    border-radius: 0 5px 5px 0;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.card-body .btn-outline-primary:hover {
+    background-color: #4e73df;
+    color: #fff;
+}
+
+/* Footer Links */
+.card-body p {
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 15px 0 0;
+}
+
+.card-body p a {
+    color: #4e73df;
+    /* text-decoration: none; */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.card-body p a:hover {
+    color: #21519f;
+}
+
+.card-body hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.card-body .text-muted {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .card-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .card-body label {
+        font-size: 0.9rem;
+    }
+
+    .card-body input,
+    .card-body select,
+    .card-body button {
+        font-size: 0.9rem;
+    }
+
+    .card-body p {
+        font-size: 0.8rem;
+    }
+}
