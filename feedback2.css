@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #7F7FD5, #91EAE4);
+    color: #333;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Feedback Form Container */
+.feedback-form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.feedback-form h1 {
+    font-size: 1.8rem;
+    background-color: #4e73df;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.feedback-form h1 i {
+    margin-right: 8px;
+}
+
+/* Labels */
+.feedback-form .form-label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Inputs and Textareas */
+.feedback-form .form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-form .form-control:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 4px rgba(37, 99, 235, 0.4);
+}
+
+/* Select Dropdown */
+.feedback-form .form-select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.feedback-form .form-select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 4px rgba(37, 99, 235, 0.4);
+}
+
+/* Radio Buttons */
+.feedback-form .form-check-label {
+    font-size: 0.9rem;
+    margin-left: 5px;
+    color: #555;
+}
+
+.feedback-form .form-check-input {
+    accent-color: #2563eb;
+}
+
+/* Terms Checkbox */
+.feedback-form .form-check-input:checked {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+/* Submit Button */
+.feedback-form .btn-primary {
+    background-color: #4e73df;
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.feedback-form .btn-primary:hover {
+    background-color: #304da3;
+    transform: translateY(-1px);
+}
+
+.feedback-form .btn-primary:active {
+    transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .feedback-form h1 {
+        font-size: 1.5rem;
+    }
+
+    .feedback-form .form-control,
+    .feedback-form .form-select,
+    .feedback-form .btn-primary {
+        font-size: 0.9rem;
+    }
+
+    .feedback-form .form-check-label {
+        font-size: 0.8rem;
+    }
+}
