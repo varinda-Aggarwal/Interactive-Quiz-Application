@@ -1,0 +1,254 @@
+/* Global reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 0.5s;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #2450a1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Content section styling */
+.content {
+    text-align: center;
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 1s;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    color: #264653;
+    margin-bottom: 15px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 1s forwards 1.5s;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s forwards 2s;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    background-color: #e76f51;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #f4a261;
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #394e73;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Flexbox for the image layout */
+.plm {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 2.5s;
+}
+
+/* Styling for images */
+.box {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    max-width: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Button styling */
+.cta-button {
+    height: 50px;
+    width: 150px;
+    background-color: #7f92b9;
+    margin: 5%;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 8px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+}
+
+.cta-button:hover {
+    background-color: #557a96;
+    transform: scale(1.05);
+}
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .download-btn {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 120px;
+        font-size: 0.9rem;
+    }
+
+    .plm {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .content h2 {
+        font-size: 1.3rem;
+    }
+
+    .content p {
+        font-size: 0.95rem;
+        max-width: 90%;
+    }
+
+    .download-btn {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100px;
+        font-size: 0.8rem;
+    }
+
+    .plm {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .content h2 {
+        font-size: 1.2rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+        max-width: 100%;
+    }
+
+    .download-btn {
+        font-size: 0.9rem;
+    }
+
+    button {
+        width: 90px;
+        font-size: 0.8rem;
+    }
+
+    .box {
+        height: 150px;
+    }
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
