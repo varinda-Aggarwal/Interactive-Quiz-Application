@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #7F7FD5;
+    margin: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .quiz-app {
+    background: #fff;
+    color: #333;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Header Styles */
+  header h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .timer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .timer-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #8c2df1, #5b94f8);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Main Styles */
+  .question-container h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .option {
+    background: #3b7ff5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .option:hover {
+    background: #6a11cb;
+    transform: scale(1.05);
+  }
+  
+  .option.correct {
+    background: #28a745;
+  }
+  
+  .option.wrong {
+    background: #dc3545;
+  }
+  
+  /* Footer Styles */
+  footer {
+    margin-top: 20px;
+  }
+  
+  .progress-container {
+    background: #f1f1f1;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
+    width: 100%;
+  }
+  
+  #progress-bar {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    height: 100%;
+    width: 0;
+    transition: width 0.4s ease;
+  }
+  
+  #progress-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
