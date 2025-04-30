@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    color: #333;
+    padding: 20px;
+  }
+
+  header {
+    background-color: #7f7fd5;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #course-material h2 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .topic {
+    background: #f4f9f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .topic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba;
+
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    animation: fadeInUp 2s ease-out;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
