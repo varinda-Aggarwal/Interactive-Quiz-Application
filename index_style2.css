@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    animation: slideIn 3s ease;
+
+    
+}
+
+.hero-content {
+    max-width: 700px;
+    transform: rotateX(10deg);
+    perspective: 1000px;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    animation: bounceIn 1.5s ease;
+}
+
+.hero p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #ff8c42;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.features, .courses, .reviews, .signup {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.features h2, .courses h2, .reviews h2, .signup h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.feature-boxes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    transform: translateZ(0);
+    perspective: 500px;
+}
+
+.feature-box {
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: scale(1.05) rotateY(5deg);
+}
+
+.icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.course-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.course {
+    width: 30%;
+    text-align: center;
+    color: #ff8c42;
+    transition: transform 0.3s;
+}
+
+.course img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.course:hover img {
+    transform: scale(1.05) rotate(1deg);
+}
+
+.review-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.review {
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.review:hover {
+    transform: scale(1.03);
+}
+
+.review p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+p {
+    color: #5959ce;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Footer Styling */
+.footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #1cc88a;
+}
+
+.footer-social {
+    margin-bottom: 1rem;
+}
+
+.footer-social .social-icon {
+    display: inline-block;
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    color: #1cc88a;
+    transform: scale(1.2);
+}
+
+/* Copyright Section */
+.footer p {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    color: #aaa;
+}
+
+
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    .footer .container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.9); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
