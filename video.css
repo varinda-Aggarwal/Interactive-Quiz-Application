@@ -1,0 +1,136 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to right, #5ee7df, #b490ca);
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color:rgb(15, 18, 9);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+#video-container {
+  background: linear-gradient(to bottom, #fdfbfb, #ebedee);
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+}
+
+#youtube-video {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#video-title {
+  font-size: 1.5rem;
+  color: #555;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Lecture List */
+#lecture-list {
+  background: linear-gradient(135deg, #5ee7df, #b490ca);
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: white;
+}
+
+#lecture-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.youtube-video {
+  background: white;
+  color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.youtube-video:hover {
+  background: #ffd700;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.youtube-video a {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #232526, #414345);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #lecture-video {
+    height: 300px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  #lecture-list h2 {
+    font-size: 1.8rem;
+  }
+
+  .youtube-video p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #lecture-video {
+    height: 250px;
+  }
+
+  .youtube-video p {
+    font-size: 0.9rem;
+  }
+}
