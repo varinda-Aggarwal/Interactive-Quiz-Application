@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Portuguese Vocabulary Learning Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h1 {
+            color: #7f92b9;
+        }
+
+        button {
+            background-color: #7f92b9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #7f92b9;
+        }
+
+        .word-box {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        .word-box p {
+            margin: 5px 0;
+        }
+
+        .word-box span {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Portuguese Vocabulary Learning Page</h1>
+        <button onclick="generateWord()">Learn a New Word</button>
+
+        <div class="word-box" id="wordBox" style="display: none;">
+            <p><span>Word:</span> <span id="word"></span></p>
+            <p><span>Meaning:</span> <span id="meaning"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Array of advanced Portuguese vocabulary words and details
+        const vocabulary = [
+            { word: "Contradição", meaning: "Contradiction" },
+            { word: "Símbolo", meaning: "Symbol" },
+            { word: "Compromisso", meaning: "Compromise" },
+            { word: "Nobre", meaning: "Noble" },
+            { word: "Prever", meaning: "Foresee" },
+            { word: "Tenacidade", meaning: "Tenacity" }
+        ];
+
+        // Function to generate a random word and display its details
+        function generateWord() {
+            const randomIndex = Math.floor(Math.random() * vocabulary.length);
+            const wordData = vocabulary[randomIndex];
+
+            // Display the word details
+            document.getElementById("word").textContent = wordData.word;
+            document.getElementById("meaning").textContent = wordData.meaning;
+
+            // Show the word box
+            document.getElementById("wordBox").style.display = "block";
+        }
+    </script>
+</body>
+</html>

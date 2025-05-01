@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Chinese Vocabulary Learning Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h1 {
+            color: #7f92b9;
+        }
+
+        button {
+            background-color: #7f92b9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #7f92b9;
+        }
+
+        .word-box {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        .word-box p {
+            margin: 5px 0;
+        }
+
+        .word-box span {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Chinese Vocabulary Learning Page</h1>
+        <button onclick="generateWord()">Learn a New Word</button>
+
+        <div class="word-box" id="wordBox" style="display: none;">
+            <p><span>Word:</span> <span id="word"></span></p>
+            <p><span>Pinyin:</span> <span id="pinyin"></span></p>
+            <p><span>Meaning:</span> <span id="meaning"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Array of advanced Chinese vocabulary words and details
+        const vocabulary = [
+            { word: "矛盾", pinyin: "máo dùn", meaning: "Contradiction" },
+            { word: "象征", pinyin: "xiàng zhēng", meaning: "Symbol" },
+            { word: "妥协", pinyin: "tuǒ xié", meaning: "Compromise" },
+            { word: "高尚", pinyin: "gāo shàng", meaning: "Noble" },
+            { word: "预见", pinyin: "yù jiàn", meaning: "Foresee" },
+            { word: "坚韧", pinyin: "jiān rèn", meaning: "Tenacity" }
+        ];
+
+        // Function to generate a random word and display its details
+        function generateWord() {
+            const randomIndex = Math.floor(Math.random() * vocabulary.length);
+            const wordData = vocabulary[randomIndex];
+
+            // Display the word details
+            document.getElementById("word").textContent = wordData.word;
+            document.getElementById("pinyin").textContent = wordData.pinyin;
+            document.getElementById("meaning").textContent = wordData.meaning;
+
+            // Show the word box
+            document.getElementById("wordBox").style.display = "block";
+        }
+    </script>
+</body>
+</html>

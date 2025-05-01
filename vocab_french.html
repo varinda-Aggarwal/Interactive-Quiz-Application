@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced French Vocabulary Learning Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #7f92b9;
+            margin-top: 50px;
+        }
+
+        .card {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+        }
+
+        .card button {
+            background-color: #7f92b9;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .card button:hover {
+            background-color: #7f92b9;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Learn Advanced French Vocabulary</h1>
+
+    <div id="vocab-container">
+        <!-- Flashcards will be dynamically added here -->
+    </div>
+
+    <script>
+        // Define a list of advanced French words with their translations
+        const vocabulary = [
+            { french: 'Époustouflant', english: 'Breathtaking' },
+            { french: 'Ressentir', english: 'To feel' },
+            { french: 'Acquérir', english: 'To acquire' },
+            { french: 'Mélancolie', english: 'Melancholy' },
+            { french: 'Intriguer', english: 'To intrigue' },
+            { french: 'Répétitif', english: 'Repetitive' },
+            { french: 'Affligeant', english: 'Distressing' },
+            { french: 'Perplexe', english: 'Perplexed' },
+            { french: 'Soudainement', english: 'Suddenly' },
+            { french: 'Inébranlable', english: 'Unshakable' }
+        ];
+
+        // Function to create flashcards dynamically
+        function createFlashcards() {
+            const container = document.getElementById("vocab-container");
+
+            vocabulary.forEach((word, index) => {
+                const card = document.createElement('div');
+                card.classList.add('card');
+                
+                const frenchWord = document.createElement('h2');
+                frenchWord.textContent = word.french;
+                card.appendChild(frenchWord);
+
+                const englishWord = document.createElement('p');
+                englishWord.textContent = word.english;
+                englishWord.classList.add('hidden');
+                card.appendChild(englishWord);
+
+                const toggleButton = document.createElement('button');
+                toggleButton.textContent = 'Show Translation';
+                toggleButton.onclick = function () {
+                    if (englishWord.classList.contains('hidden')) {
+                        englishWord.classList.remove('hidden');
+                        toggleButton.textContent = 'Hide Translation';
+                    } else {
+                        englishWord.classList.add('hidden');
+                        toggleButton.textContent = 'Show Translation';
+                    }
+                };
+                card.appendChild(toggleButton);
+
+                container.appendChild(card);
+            });
+        }
+
+        // Call the function to create the flashcards when the page loads
+        window.onload = createFlashcards;
+    </script>
+
+</body>
+</html>

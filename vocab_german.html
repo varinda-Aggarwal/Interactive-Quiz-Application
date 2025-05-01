@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced German Vocabulary Learning Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #7f92b9;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .word-card {
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .word-card h2 {
+            font-size: 24px;
+            color: #7f92b9;
+        }
+
+        .word-card p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .btn {
+            background-color: #7f92b9;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #7f92b9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Advanced German Vocabulary Learning</h1>
+
+    <div class="container">
+        <!-- Word 1 -->
+        <div class="word-card">
+            <h2 id="word1" style="color: rgba(0, 0, 0, 0.774);">Erleuchtung</h2>
+            <p id="definition1">Definition: Enlightenment or illumination. Often used in philosophical or spiritual contexts.</p>
+            <p><strong>Example:</strong> Die Erleuchtung kam nach Jahren der Meditation. (Enlightenment came after years of meditation.)</p>
+            <button class="btn" onclick="toggleVisibility('definition1')">Show/Hide Definition</button>
+        </div>
+
+        <!-- Word 2 -->
+        <div class="word-card">
+            <h2 id="word2" style="color: rgba(0, 0, 0, 0.774);">Zerstreuung</h2>
+            <p id="definition2">Definition: Distraction or diversion. It refers to a state of being distracted or to activities that divert attention.</p>
+            <p><strong>Example:</strong> Die Zerstreuung während der Besprechung war störend. (The distraction during the meeting was disturbing.)</p>
+            <button class="btn" onclick="toggleVisibility('definition2')">Show/Hide Definition</button>
+        </div>
+
+        <!-- Word 3 -->
+        <div class="word-card">
+            <h2 id="word3" style="color: rgba(0, 0, 0, 0.774);">Verschwendung</h2>
+            <p id="definition3">Definition: Waste or extravagance. Refers to the unnecessary use of resources.</p>
+            <p><strong>Example:</strong> Die Verschwendung von Lebensmitteln ist in vielen Teilen der Welt ein großes Problem. (The waste of food is a big problem in many parts of the world.)</p>
+            <button class="btn" onclick="toggleVisibility('definition3')">Show/Hide Definition</button>
+        </div>
+
+        <!-- Word 4 -->
+        <div class="word-card">
+            <h2 id="word4" style="color: rgba(0, 0, 0, 0.774);">Unabhängigkeit</h2>
+            <p id="definition4">Definition: Independence. Often used in political contexts, but also refers to personal autonomy.</p>
+            <p><strong>Example:</strong> Die Unabhängigkeit der Nation wurde nach vielen Jahren des Kampfes erreicht. (The independence of the nation was achieved after many years of struggle.)</p>
+            <button class="btn" onclick="toggleVisibility('definition4')">Show/Hide Definition</button>
+        </div>
+
+        <!-- Word 5 -->
+        <div class="word-card">
+            <h2 id="word5" style="color: rgba(0, 0, 0, 0.774);">Schadenfreude</h2>
+            <p id="definition5">Definition: The pleasure derived from another person's misfortune. A uniquely German term that describes this feeling.</p>
+            <p><strong>Example:</strong> Er konnte seine Schadenfreude nicht verbergen, als sein Rivale scheiterte. (He couldn’t hide his schadenfreude when his rival failed.)</p>
+            <button class="btn" onclick="toggleVisibility('definition5')">Show/Hide Definition</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle visibility of definition
+        function toggleVisibility(id) {
+            var definition = document.getElementById(id);
+            if (definition.style.display === "none") {
+                definition.style.display = "block";
+            } else {
+                definition.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
